@@ -16,7 +16,7 @@ The proposed architecture incorporates VGG16 network base layers, top layer stru
 
 ### Sprendimas
 Flight simulator was used to generate aerial images simulating UAV flight conditions.
-Images were matched to the maps from sattelite photo.
+Images were used to train deep neural network using triplet learning technique. Neural network was evaluated against Pearson correlation coefficient comparing images to orthophotographical maps from sattelite photo.
 
 ### Šiek tiek apie rezultatus
 The matching results from proposed Neural network architecture are compared against Pearson correlation.
