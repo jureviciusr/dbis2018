@@ -1,22 +1,22 @@
-Learning Areal Image Similarity using Triplet Networks
+Learning Aerial Image Similarity using Triplet Networks
 
 Vytautas valaitis, Virginijus Marcinkevičius, Rokas Jurevičius
 Vilnius University, Faculty of Mathematics and Informatics
 
 -Įvadas apie sritį
-Unmanned areal vehicles faces localization challanges in sattelite navigation systems denied enviroment.
-Images taken from onboard cameras must be compared to ones stored as a map to support many localization algorithms.
+Unmanned aerial vehicles faces localization challanges in sattelite navigation system denied enviroments.
+Images taken from on-board cameras can be used to compare against orthophotographical map to support visual localization algorithms, such as particle filter localization, synchronous localization and mapping (abbr. SLAM).
 
 -Problema
-Image similarity estimation can be achieved by template maching, correlation, (we chose Pearson correlation as baseline), distance based algorithms, etc.
-Pearson correlation is not robust enought to adapt to affine transformations (e.g. rotation higher than 5 degrees, as our experiments shows).
+Image similarity estimation can be achieved calculating similarity measures, such as Pearson correlation, or distance based algorithms.
+Pearson correlation is not robust against image displacement caused by aircraft frame movement, previous work show that aircraft heading angle error of 5 degrees causes 35% decreased in correlation measure compared with matched image with no rotational error.
 
-We propose the new architecture of triplet neuron network to learn image simiarity.
-The proposed network uses VGG16 networks bottom layers, top layers structure being suggested by authors.
+In this paper, an architecture of triplet neuron network is proposed to learn image simiarity measure.
+The proposed architecture incorporates VGG16 network base layers, top layer structure being suggested by authors.
 
 -Sprendimas
-We used our custom flight simulator, to generate areal images similar to ones obtainable in UAV's flight.
+Flight simulator was used to generate aerial images simulating UAV flight conditions.
 Images were matched to the maps from sattelite photo.
 
 -Šiek tiek apie rezultatus
-The matching results from our proposed network and Pearson correlation are presented in this paper.
+The matching results from proposed Neural network architecture are compared against Pearson correlation.
